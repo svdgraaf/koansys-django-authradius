@@ -82,8 +82,8 @@ using.  Example::
   AUTHENTICATION_BACKENDS = (
       'django.contrib.auth.backends.ModelBackend',
       'authbackends.authsawsbackend.AuthSawsBackend',
-      'koansys.authradius.AuthRadiusBackend',
-  )
+      'koansys.django.authradius.AuthRadius',
+    )
 
 
 
