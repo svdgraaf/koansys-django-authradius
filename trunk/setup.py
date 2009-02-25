@@ -1,0 +1,31 @@
+from setuptools import setup, find_packages
+import os
+
+# TODO: why isn't this egg isn't packaging the top-level *.txt files?
+
+here = os.path.abspath(os.path.dirname(__file__))
+VERSION = open(os.path.join(here, 'VERSION.txt')).readline().strip()
+README  = open(os.path.join(here, 'README.txt')).read()
+CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
+
+setup(
+    name        = "koansys.django.authradius",
+    author      = "Chris Shenton",
+    description = "Django can authenticate against a RADIUS server",
+    version     = VERSION,
+    long_description = README + "\n\n" + CHANGES,
+    license     = "BSD",
+    keywords    = "authentication",
+    url         = "https://.../TBD",
+    classifiers = [
+    "Programming Language :: Python",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: BSD License",
+    ],
+    zip_safe    = False,
+    packages    = find_packages(),
+    package_data        = { "": ["*.txt", "*.rst"],},
+    include_package_data = True,
+    namespace_packages   = ["koansys", "koansys.django"],
+    install_requires=["pyrad >= 1.1"],
+)
