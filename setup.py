@@ -11,12 +11,13 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 setup(
     name        = "koansys.django.authradius",
     author      = "Chris Shenton",
+    author_email= "chris@koansys.com",
     description = "Django can authenticate against a RADIUS server",
     version     = VERSION,
     long_description = README + "\n\n" + CHANGES,
     license     = "BSD",
     keywords    = "authentication",
-    url         = "http://koansys-django-authradius.googlecode.com/svn/",
+    url         = "http://koansys-django-authradius.googlecode.com/",
     classifiers = [
     "Programming Language :: Python",
     "Development Status :: 5 - Production/Stable",
