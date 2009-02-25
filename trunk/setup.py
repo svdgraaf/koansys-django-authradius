@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-# TODO: why isn't this egg isn't packaging the top-level *.txt files?
+# TODO: why isn't this egg packaging the top-level *.txt files?
 
 here = os.path.abspath(os.path.dirname(__file__))
 VERSION = open(os.path.join(here, 'VERSION.txt')).readline().strip()
@@ -16,10 +16,13 @@ setup(
     long_description = README + "\n\n" + CHANGES,
     license     = "BSD",
     keywords    = "authentication",
-    url         = "https://.../TBD",
+    url         = "http://koansys-django-authradius.googlecode.com/svn/",
     classifiers = [
     "Programming Language :: Python",
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
     "License :: OSI Approved :: BSD License",
     ],
     zip_safe    = False,
