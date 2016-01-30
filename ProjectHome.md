@@ -1,0 +1,1 @@
+Django by default authenticates against its own database. This allows authentication against a RADIUS server (in our case, the one offered by the RSA SecurID token authentication product). It can be stacked so that users are first checked in Django's DB and if not found, checked in RADIUS.
